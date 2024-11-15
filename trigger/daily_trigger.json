@@ -1,0 +1,32 @@
+{
+	"name": "daily_trigger",
+	"properties": {
+		"description": "daily_trigger for sales",
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_copy_SQL_Table",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "pl_copyCSVFile",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 10,
+				"startTime": "2024-11-13T20:34:00",
+				"endTime": "2024-12-01T20:57:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

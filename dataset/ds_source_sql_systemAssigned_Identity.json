@@ -1,0 +1,17 @@
+{
+	"name": "ds_source_sql_systemAssigned_Identity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_systemAssignedIdentity",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employees"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

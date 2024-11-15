@@ -1,0 +1,26 @@
+{
+	"name": "ds_source_lookup_sql_for_until",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_sql_server",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "tableName",
+				"type": "varchar"
+			},
+			{
+				"name": "refreshed",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "mastertable"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
