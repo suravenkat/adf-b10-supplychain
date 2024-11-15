@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-b10-dev"
+		},
+		"ls_AzureDataLakeStorageGen2_accountKey": {
+			"value": ""
+		},
+		"ls_Target_database_connectionString": {
+			"value": ""
+		},
+		"ls_source_sql_server_connectionString": {
+			"value": ""
+		},
+		"ls_AzureDataLakeStorageGen2_properties_typeProperties_url": {
+			"value": "https://adlsgen2b10dev.dfs.core.windows.net"
+		},
+		"ls_AzureKeyVault_for_SQL_properties_typeProperties_baseUrl": {
+			"value": "https://adf-b10-keyvault.vault.azure.net/"
+		},
+		"ls_Rest_API_properties_typeProperties_url": {
+			"value": "https://reqres.in/api/users"
+		},
+		"ls_keyVault_sql_properties_typeProperties_connectionString_secretName": {
+			"value": "sqlb10secret"
+		},
+		"ls_sql_systemAssignedIdentity_properties_typeProperties_server": {
+			"value": "sqlserverb10dev.database.windows.net"
+		},
+		"ls_sql_systemAssignedIdentity_properties_typeProperties_database": {
+			"value": "sqldbdev"
+		},
+		"TumblingWindowTrigger_properties_pipeline_parameters_StartDate": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"TumblingWindowTrigger_properties_pipeline_parameters_EndDate": {
+			"value": "@trigger().outputs.windowEndTime"
+		}
+	}
+}
