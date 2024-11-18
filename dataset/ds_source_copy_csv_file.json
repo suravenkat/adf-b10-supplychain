@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "notexistfilecsv",
+				"fileName": "notexistfile.csv",
+				"folderPath": "source",
 				"fileSystem": "adlsgen2container"
 			},
 			"columnDelimiter": ",",
