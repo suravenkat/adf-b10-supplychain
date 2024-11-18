@@ -1,5 +1,5 @@
 {
-	"name": "ds_source_copy_csv_file",
+	"name": "ds_target_dataflow",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureDataLakeStorageGen2",
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "notexistfile.csv",
-				"folderPath": "source",
+				"fileName": "jointables",
+				"folderPath": "target/dataflowOutput",
 				"fileSystem": "adlsgen2container"
 			},
 			"columnDelimiter": ",",
@@ -20,6 +20,5 @@
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
