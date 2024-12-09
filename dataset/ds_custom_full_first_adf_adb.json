@@ -1,0 +1,19 @@
+{
+	"name": "ds_custom_full_first_adf_adb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_adls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "adlsgen2container"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
