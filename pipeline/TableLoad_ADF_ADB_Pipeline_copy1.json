@@ -118,6 +118,10 @@
 										"TableFolder": {
 											"value": "@item().targetTableName",
 											"type": "Expression"
+										},
+										"Source_File_Name": {
+											"value": "@item().Source_File_Name",
+											"type": "Expression"
 										}
 									}
 								}
@@ -137,8 +141,8 @@
 							"targetTableName": "hz_employees_last07",
 							"Source_File_Name": "lz_employees_last07",
 							"Source_File_Location": "/adb/lz_data/src_sys/asia/india/sales/",
-							"Target_File_Location": "/adb/lz_data/src_sys/asia/india/sales/hz_employees_last07/",
-							"Delete_File_Location": "/adb/lz_data/src_sys/asia/india/sales/hz_employees_last07/",
+							"Target_File_Location": "/adb/hz_data/src_sys/asia/india/sales/hz_employees_last07/",
+							"Delete_File_Location": "/adb/hz_data/src_sys/asia/india/sales/hz_employees_last07/",
 							"Source_File_Delimiter": "parquet",
 							"Rejected_Record_Location": "/adb/working/sales/err/asia/err_employees_last07/",
 							"Rejected_File_Location": "/adb/lz_data/src_sys/asia/sales/reject/hz_employees_last07/",
@@ -200,9 +204,9 @@
 							"sourceTableName": "salesitems",
 							"targetTableName": "hz_salesitems",
 							"Source_File_Name": "lz_salesitems",
-							"Source_File_Location": "/adb/lz_data/src_sys/asia/sales/",
-							"Target_File_Location": "/adb/lz_data/src_sys/asia/india/sales/hz_salesitems/",
-							"Delete_File_Location": "/adb/lz_data/src_sys/asia/india/sales/hz_salesitems/",
+							"Source_File_Location": "/adb/lz_data/src_sys/asia/india/sales/",
+							"Target_File_Location": "/adb/hz_data/src_sys/asia/india/sales/hz_salesitems/",
+							"Delete_File_Location": "/adb/hz_data/src_sys/asia/india/sales/hz_salesitems/",
 							"Source_File_Delimiter": "parquet",
 							"Rejected_Record_Location": "/adb/working/sales/err/asia/err_salesitems/",
 							"Rejected_File_Location": "/adb/lz_data/src_sys/asia/sales/reject/hz_salesitems/",
@@ -271,9 +275,9 @@
 							"sourceTableName": "employees",
 							"targetTableName": "hz_employees",
 							"Source_File_Name": "lz_employees",
-							"Source_File_Location": "/adb/lz_data/src_sys/asia/sales/",
-							"Target_File_Location": "/adb/lz_data/src_sys/asia/india/sales/hz_employees/",
-							"Delete_File_Location": "/adb/lz_data/src_sys/asia/india/sales/hz_employees/",
+							"Source_File_Location": "/adb/lz_data/src_sys/asia/india/sales/",
+							"Target_File_Location": "/adb/hz_data/src_sys/asia/india/sales/hz_employees/",
+							"Delete_File_Location": "/adb/hz_data/src_sys/asia/india/sales/hz_employees/",
 							"Source_File_Delimiter": "parquet",
 							"Rejected_Record_Location": "/adb/working/sales/err/asia/err_employees/",
 							"Rejected_File_Location": "/adb/lz_data/src_sys/asia/sales/reject/hz_employees/",
@@ -384,17 +388,20 @@
 					{
 						"tableName": "employees_last7",
 						"tableSchemaName": "dbo",
-						"WaterMark_Column": "last_updated"
+						"WaterMark_Column": "last_updated",
+						"Source_File_Name": "lz_employees_last07"
 					},
 					{
 						"tableName": "salesitems",
 						"tableSchemaName": "dbo",
-						"WaterMark_Column": "last_updated"
+						"WaterMark_Column": "last_updated",
+						"Source_File_Name": "lz_salesitems"
 					},
 					{
 						"tableName": "employees",
 						"tableSchemaName": "dbo",
-						"WaterMark_Column": "last_updated"
+						"WaterMark_Column": "last_updated",
+						"Source_File_Name": "lz_employees"
 					}
 				]
 			}
