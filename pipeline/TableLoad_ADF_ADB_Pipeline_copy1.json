@@ -108,22 +108,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_custom_full_first_adf_adb",
-									"type": "DatasetReference",
-									"parameters": {
-										"lz_path": {
-											"value": "@pipeline().parameters.lz_root_path",
-											"type": "Expression"
-										},
-										"TableFolder": {
-											"value": "@item().tableName",
-											"type": "Expression"
-										},
-										"Source_File_Name": {
-											"value": "@item().Source_File_Name",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "ds_custom_full_first_adf_adb_clone",
+									"type": "DatasetReference"
 								}
 							]
 						}
