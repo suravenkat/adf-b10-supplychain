@@ -108,7 +108,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_custom_full_first_adf_adb",
+									"referenceName": "ds_custom_full_first_adf_adb_clone",
 									"type": "DatasetReference"
 								}
 							]
