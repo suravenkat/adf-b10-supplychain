@@ -116,7 +116,7 @@
 											"type": "Expression"
 										},
 										"TableFolder": {
-											"value": "@item().targetTableName",
+											"value": "@item().tableName",
 											"type": "Expression"
 										},
 										"Source_File_Name": {
