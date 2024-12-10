@@ -15,7 +15,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "/adb/lz_data/src_sys/asia/india/sales/",
+					"value": "/adb/lz_data/src_sys/asia/sales/",
 					"type": "Expression"
 				},
 				"fileSystem": "adlsgen2container"
