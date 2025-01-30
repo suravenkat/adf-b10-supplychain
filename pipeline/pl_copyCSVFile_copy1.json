@@ -54,66 +54,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "ID",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "customer_ID",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Brand",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "Brand",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Model",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "Model",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Year",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "sale_Year",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "UnitsSold",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "UnitsSold",
-									"type": "String",
-									"physicalType": "String"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
