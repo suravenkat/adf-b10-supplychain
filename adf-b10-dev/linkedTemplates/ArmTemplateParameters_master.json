@@ -8,7 +8,13 @@
 		"ls_AzureDataLakeStorageGen2_accountKey": {
 			"value": ""
 		},
+		"ls_AzureDatabricks_accessToken": {
+			"value": ""
+		},
 		"ls_Target_database_connectionString": {
+			"value": ""
+		},
+		"ls_source_adls_gen2_accountKey": {
 			"value": ""
 		},
 		"ls_source_sql_server_connectionString": {
@@ -16,6 +22,9 @@
 		},
 		"ls_AzureDataLakeStorageGen2_properties_typeProperties_url": {
 			"value": "https://adlsgen2b10dev.dfs.core.windows.net"
+		},
+		"ls_AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1129-144036-bllng77i"
 		},
 		"ls_AzureKeyVault_for_SQL_properties_typeProperties_baseUrl": {
 			"value": "https://adf-b10-keyvault.vault.azure.net/"
@@ -25,6 +34,9 @@
 		},
 		"ls_keyVault_sql_properties_typeProperties_connectionString_secretName": {
 			"value": "sqlb10secret"
+		},
+		"ls_source_adls_gen2_properties_typeProperties_url": {
+			"value": "https://adlsgen2b10dev.dfs.core.windows.net"
 		},
 		"ls_sql_systemAssignedIdentity_properties_typeProperties_server": {
 			"value": "sqlserverb10dev.database.windows.net"

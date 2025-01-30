@@ -11,9 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_AzureDataLakeStorageGen2'"
 		},
+		"ls_AzureDatabricks_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'ls_AzureDatabricks'"
+		},
 		"ls_Target_database_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_Target_database'"
+		},
+		"ls_source_adls_gen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_source_adls_gen2'"
 		},
 		"ls_source_sql_server_connectionString": {
 			"type": "secureString",
@@ -22,6 +30,10 @@
 		"ls_AzureDataLakeStorageGen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsgen2b10dev.dfs.core.windows.net"
+		},
+		"ls_AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1129-144036-bllng77i"
 		},
 		"ls_AzureKeyVault_for_SQL_properties_typeProperties_baseUrl": {
 			"type": "string",
@@ -34,6 +46,10 @@
 		"ls_keyVault_sql_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
 			"defaultValue": "sqlb10secret"
+		},
+		"ls_source_adls_gen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2b10dev.dfs.core.windows.net"
 		},
 		"ls_sql_systemAssignedIdentity_properties_typeProperties_server": {
 			"type": "string",
@@ -81,8 +97,14 @@
 					"ls_AzureDataLakeStorageGen2_accountKey": {
 						"value": "[parameters('ls_AzureDataLakeStorageGen2_accountKey')]"
 					},
+					"ls_AzureDatabricks_accessToken": {
+						"value": "[parameters('ls_AzureDatabricks_accessToken')]"
+					},
 					"ls_Target_database_connectionString": {
 						"value": "[parameters('ls_Target_database_connectionString')]"
+					},
+					"ls_source_adls_gen2_accountKey": {
+						"value": "[parameters('ls_source_adls_gen2_accountKey')]"
 					},
 					"ls_source_sql_server_connectionString": {
 						"value": "[parameters('ls_source_sql_server_connectionString')]"
@@ -90,11 +112,17 @@
 					"ls_AzureDataLakeStorageGen2_properties_typeProperties_url": {
 						"value": "[parameters('ls_AzureDataLakeStorageGen2_properties_typeProperties_url')]"
 					},
+					"ls_AzureDatabricks_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_AzureDatabricks_properties_typeProperties_existingClusterId')]"
+					},
 					"ls_AzureKeyVault_for_SQL_properties_typeProperties_baseUrl": {
 						"value": "[parameters('ls_AzureKeyVault_for_SQL_properties_typeProperties_baseUrl')]"
 					},
 					"ls_Rest_API_properties_typeProperties_url": {
 						"value": "[parameters('ls_Rest_API_properties_typeProperties_url')]"
+					},
+					"ls_source_adls_gen2_properties_typeProperties_url": {
+						"value": "[parameters('ls_source_adls_gen2_properties_typeProperties_url')]"
 					},
 					"ls_sql_systemAssignedIdentity_properties_typeProperties_server": {
 						"value": "[parameters('ls_sql_systemAssignedIdentity_properties_typeProperties_server')]"
@@ -159,9 +187,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"ls_keyVault_sql_properties_typeProperties_connectionString_secretName": {
-						"value": "[parameters('ls_keyVault_sql_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},
@@ -182,6 +207,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_keyVault_sql_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('ls_keyVault_sql_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},
@@ -202,6 +230,26 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf-b10-dev_ArmTemplate_4')]"
+			]
+		},
+		{
+			"name": "adf-b10-dev_ArmTemplate_6",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_6.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
 					},
 					"TumblingWindowTrigger_properties_pipeline_parameters_StartDate": {
 						"value": "[parameters('TumblingWindowTrigger_properties_pipeline_parameters_StartDate')]"
@@ -212,7 +260,7 @@
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'adf-b10-dev_ArmTemplate_4')]"
+				"[resourceId('Microsoft.Resources/deployments', 'adf-b10-dev_ArmTemplate_5')]"
 			]
 		}
 	]
