@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "notexistfile.csv",
+				"fileName": "emplab.csv",
 				"folderPath": "source",
 				"fileSystem": "adlsgen2container"
 			},
