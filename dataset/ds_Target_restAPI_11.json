@@ -1,25 +1,32 @@
 {
-	"name": "ds_source_copy_csv_file",
+	"name": "ds_Target_restAPI_11",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureDataLakeStorageGen2",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TargetFileName": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "emplab.csv",
-				"folderPath": "source",
+				"fileName": {
+					"value": "@dataset().TargetFileName",
+					"type": "Expression"
+				},
+				"folderPath": "target/restapioutput11",
 				"fileSystem": "adlsgen2container"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }

@@ -1,0 +1,20 @@
+{
+	"name": "ds_webactivity_target_copy_11_JSON",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_AzureDataLakeStorageGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "webtargetjsonfileoutput11",
+				"folderPath": "target/webactivityoutput11",
+				"fileSystem": "adlsgen2container"
+			}
+		},
+		"schema": {}
+	}
+}

@@ -1,5 +1,5 @@
 {
-	"name": "ds_source_copy_csv_file",
+	"name": "ds_webactivity_source_copy_11",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureDataLakeStorageGen2",
@@ -10,16 +10,19 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "emplab.csv",
+				"fileName": "samplefile.txt",
 				"folderPath": "source",
 				"fileSystem": "adlsgen2container"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
-		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
 }

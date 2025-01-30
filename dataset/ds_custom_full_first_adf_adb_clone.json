@@ -1,0 +1,27 @@
+{
+	"name": "ds_custom_full_first_adf_adb_clone",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_adls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "lz_employees_last07",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "/adb/lz_data/src_sys/asia/sales/",
+					"type": "Expression"
+				},
+				"fileSystem": "adlsgen2container"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
